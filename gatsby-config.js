@@ -1,9 +1,10 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Karthik Kumar - Portfolio",
+    description: "Systems Performance Engineer | DevOps Specialist",
+    author: "Goriga Karthik Kumar",
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-postcss",
+  ],
 }
