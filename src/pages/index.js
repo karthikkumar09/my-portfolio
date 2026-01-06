@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin, Menu, X, Code, Target, Pencil, Wrench, TestTube, ChevronRight, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Menu, X, Code, ChevronRight } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,7 +7,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -33,107 +33,68 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "System Performance Monitoring & Analytics Platform",
-      category: "Performance Engineering",
-      description: "Python-based monitoring system collecting CPU, memory, disk I/O, and network metrics from Linux hosts with 99% data collection reliability.",
+      title: "Personalised Movie Recommendation System",
+      category: "Machine Learning",
+      description: "Developed a recommendation system using content-based filtering and collaborative filtering to suggest movies based on features and user preferences.",
       highlights: [
-        "Built time-series analytics pipeline using InfluxDB and Grafana",
-        "Developed REST APIs achieving sub-second response time",
-        "Reduced metric noise by 30% through data normalization"
+        "Achieved 85% accuracy with under 2-second response times",
+        "Collaborative filtering had 10% higher precision, content-based filtering was 75% faster",
+        "Processed 2000+ movies and deployed web app using Flask for real-time recommendations"
       ],
-      tech: ["Python", "InfluxDB", "Grafana", "REST API"]
+      tech: ["Python", "Flask", "Scikit-learn", "Pandas", "Content-based Filtering", "Collaborative Filtering"]
     },
     {
-      title: "Automated Hardware Benchmarking Tool",
-      category: "Automation",
-      description: "Created an automated benchmarking framework to evaluate CPU, memory, disk, and network performance across heterogeneous hardware platforms.",
+      title: "Predictive Churn Modeling for Telecom Customers",
+      category: "Machine Learning",
+      description: "Built and compared churn prediction models using logistic regression, decision trees, and random forests to identify the most accurate approach.",
       highlights: [
-        "Standardized benchmark execution with 5% variance across runs",
-        "Reduced manual benchmarking effort by 70%",
-        "Improved hardware selection precision for capacity planning"
+        "Achieved 79.4% accuracy with tuned random forest model",
+        "Improved accuracy by 4.3% using hyperparameter tuning and grid search cross-validation",
+        "Analyzed data from 7,000+ customers, identifying key churn factors for retention strategies"
       ],
-      tech: ["Python", "sysbench", "fio", "iperf"]
+      tech: ["Python", "Scikit-learn", "Random Forest", "Logistic Regression", "Decision Trees", "Grid Search"]
     },
     {
-      title: "Kubernetes Configuration Validation Tool",
-      category: "DevOps",
-      description: "Developed a validation engine to analyze Kubernetes Helm charts and YAML configurations for resource, replica, and dependency inconsistencies.",
+      title: "Image Classification Using Convolutional Neural Networks (CNN)",
+      category: "Deep Learning",
+      description: "Developed a CNN model on the CIFAR-10 dataset with batch normalization and dropout techniques for robust image classification.",
       highlights: [
-        "Detected misconfigurations with 90% precision",
-        "Reduced deployment instability and pod restarts by 25%",
-        "Integrated pre-deployment validation workflows"
+        "Achieved 89% accuracy using batch normalization and dropout",
+        "Reduced training time to 150 seconds on GPU",
+        "Processed 60,000+ images across 10 categories for scalable real-time classification"
       ],
-      tech: ["Python", "Kubernetes", "Helm", "YAML"]
+      tech: ["Python", "TensorFlow", "Keras", "CNN", "GPU Computing", "CIFAR-10"]
     },
     {
-      title: "AI-Assisted Deployment Recommendation System",
-      category: "Cloud Infrastructure",
-      description: "Built a rule-based and heuristic-driven system to recommend optimal deployment configurations based on workload patterns.",
+      title: "Intelligent Customer Service Chatbot Using Machine Learning and LSTM",
+      category: "Natural Language Processing",
+      description: "Developed a chatbot using machine learning for intent detection and LSTM networks for generating contextual responses.",
       highlights: [
-        "Reduced over-provisioning and under-provisioning by 20%",
-        "Implemented human-in-the-loop approval mechanism",
-        "Mitigated configuration drift with version-controlled templates"
+        "Achieved 90% accuracy in answering customer queries",
+        "Reduced response times to less than 2 seconds",
+        "Scaled to handle large volumes of customer interactions for order tracking, store hours, and product availability"
       ],
-      tech: ["Python", "Docker", "Kubernetes", "CI/CD"]
-    }
-  ];
-
-  const services = [
-    {
-      title: "Performance Monitoring",
-      description: "System performance tracking and optimization using modern monitoring tools and analytics platforms."
+      tech: ["Python", "LSTM", "TensorFlow", "Keras", "NLP", "Machine Learning"]
     },
     {
-      title: "DevOps Automation",
-      description: "Infrastructure automation, CI/CD pipeline development, and containerized deployment solutions."
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud architecture design and implementation with focus on reliability and performance."
-    },
-    {
-      title: "Configuration Management",
-      description: "Kubernetes orchestration, Helm chart development, and infrastructure-as-code solutions."
-    },
-    {
-      title: "System Optimization",
-      description: "Performance benchmarking, capacity planning, and resource utilization optimization."
-    },
-    {
-      title: "Machine Learning",
-      description: "Data preprocessing, model training, and deployment of ML solutions for practical applications."
-    }
-  ];
-
-  const workflowSteps = [
-    {
-      icon: <Target size={48} />,
-      title: "Planning",
-      description: "Understanding requirements, defining goals, and creating technical roadmaps."
-    },
-    {
-      icon: <Pencil size={48} />,
-      title: "Design",
-      description: "Architecting scalable solutions with best practices and performance in mind."
-    },
-    {
-      icon: <Code size={48} />,
-      title: "Build",
-      description: "Developing robust, high-performance solutions with clean, maintainable code."
-    },
-    {
-      icon: <TestTube size={48} />,
-      title: "Testing",
-      description: "Ensuring reliability, performance, and security through comprehensive testing."
+      title: "Decision Support System for Drone Management",
+      category: "Machine Learning & Web Development",
+      description: "Developed a Random Forest model to recommend optimal drones based on 11 key parameters with real-time prediction capabilities.",
+      highlights: [
+        "Achieved 95% accuracy in drone recommendations",
+        "Response times under 3 seconds using Flask and MongoDB integration",
+        "Designed React interface for seamless real-time drone selection, optimized using PCA"
+      ],
+      tech: ["Python", "React.js", "Flask", "MongoDB", "Random Forest", "PCA"]
     }
   ];
 
   const skills = [
-    { category: "Programming & Scripting", items: ["Python", "Bash/Shell", "REST API", "YAML", "JSON"] },
-    { category: "Systems & Performance", items: ["Performance Monitoring", "Benchmarking", "Capacity Planning", "System Optimization"] },
-    { category: "Monitoring & Analytics", items: ["InfluxDB", "Grafana", "Prometheus", "Time-series Analysis"] },
-    { category: "DevOps & Cloud", items: ["Docker", "Kubernetes", "Helm", "CI/CD", "Configuration Management"] },
-    { category: "Tools & Platforms", items: ["Git", "GitHub", "Linux", "VS Code", "Ubuntu", "CentOS"] }
+    { category: "Programming Languages", items: ["Python", "MATLAB", "C/C++", "JavaScript", "HTML", "CSS"] },
+    { category: "Frameworks & Libraries", items: ["Flask", "React.js", "Scikit-learn", "TensorFlow", "Keras", "Pandas", "NumPy"] },
+    { category: "ML/DL Techniques", items: ["Content-based Filtering", "Collaborative Filtering", "Logistic Regression", "Decision Trees", "Random Forests", "CNN", "LSTM"] },
+    { category: "Databases & Tools", items: ["MongoDB", "SQL", "PCA", "Hyperparameter Tuning", "Grid Search CV"] },
+    { category: "DevOps & Version Control", items: ["Git", "GitHub", "GitHub Actions", "Docker", "CI/CD"] }
   ];
 
   return (
@@ -148,7 +109,7 @@ const Portfolio = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
+              {['Home', 'About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -175,7 +136,7 @@ const Portfolio = () => {
 
         {isMenuOpen && (
           <div className="md:hidden bg-black border-t border-gray-800">
-            {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
+            {['Home', 'About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -197,16 +158,16 @@ const Portfolio = () => {
         <div className="relative max-w-6xl mx-auto text-left">
           <div className="mb-8">
             <div className="inline-block px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full mb-6">
-              <span className="text-orange-500 text-sm font-medium">Systems Performance Engineer</span>
+              <span className="text-orange-500 text-sm font-medium">Machine Learning Engineer</span>
             </div>
           </div>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">
             <span className="text-white">CODE.</span><br/>
             <span className="text-white">CREATE.</span><br/>
-            <span className="text-orange-500">CONQUER!</span>
+            <span className="text-orange-500">INNOVATE!</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl">
-            Building high-performance infrastructure solutions with modern DevOps practices and cloud technologies.
+            Building intelligent ML solutions and scalable applications using deep learning, AI, and modern web technologies.
           </p>
           <div className="flex flex-wrap gap-4">
             <button
@@ -238,15 +199,26 @@ const Portfolio = () => {
           
           <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              Where innovation meets expertise. I'm a Computer Science Master's student at Blekinge Institute of Technology, Sweden, specializing in systems performance engineering, DevOps automation, and cloud technologies. With a strong foundation in Python programming and a passion for optimizing system performance, I focus on building reliable, scalable infrastructure solutions that drive business value.
+              I'm a Computer Science Master's student at Blekinge Institute of Technology, Sweden, specializing in machine learning, deep learning, and artificial intelligence. With expertise in building intelligent systems using TensorFlow, Keras, and modern ML frameworks, I focus on creating scalable applications that solve real-world problems through data-driven approaches and innovative algorithms.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mt-12">
               <div className="bg-black/50 p-6 rounded-xl border border-gray-800">
-                <h4 className="text-orange-500 font-semibold mb-2">Education</h4>
-                <p className="text-white font-medium">Master's in Computer Science</p>
-                <p className="text-gray-400 text-sm">Blekinge Institute of Technology</p>
-                <p className="text-gray-500 text-xs mt-1">Jan 2024 - Present</p>
+                <h4 className="text-orange-500 font-semibold mb-4">Education</h4>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-white font-medium">Master's in Computer Science</p>
+                    <p className="text-gray-400 text-sm">Blekinge Institute of Technology</p>
+                    <p className="text-gray-500 text-xs mt-1">Jan 2024 - Present</p>
+                    <p className="text-gray-400 text-sm mt-2">Software Security, Cloud Computing, AI, Malware Analysis, Research Methodology</p>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Bachelor's in Computer Science</p>
+                    <p className="text-gray-400 text-sm">JNTU Hyderabad</p>
+                    <p className="text-gray-500 text-xs mt-1">Aug 2020 - Nov 2023</p>
+                    <p className="text-gray-400 text-sm mt-2">AI, Data Structures, Algorithms, Database Systems, Cloud Computing</p>
+                  </div>
+                </div>
               </div>
               
               <div className="bg-black/50 p-6 rounded-xl border border-gray-800">
@@ -255,9 +227,13 @@ const Portfolio = () => {
                   <Mail size={16} className="text-orange-500" />
                   <span className="text-sm">gkklucky7@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-300">
+                <div className="flex items-center gap-2 text-gray-300 mb-4">
                   <Phone size={16} className="text-orange-500" />
                   <span className="text-sm">0760502329</span>
+                </div>
+                <div className="mt-6">
+                  <h4 className="text-orange-500 font-semibold mb-3">Location</h4>
+                  <p className="text-gray-300">Karlskrona, Sweden</p>
                 </div>
               </div>
             </div>
@@ -265,7 +241,44 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section id="experience" className="py-32 px-6 bg-black">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-7xl font-bold mb-4">
+              <span className="text-gray-700">Experience</span>
+            </h2>
+            <h3 className="text-4xl font-bold text-orange-500">Career</h3>
+          </div>
 
+          <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-10">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0 w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                <Code size={32} className="text-orange-500" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold text-white mb-2">Machine Learning Intern</h3>
+                <p className="text-orange-500 font-semibold text-lg mb-1">Agratas Edutech</p>
+                <p className="text-gray-500 mb-6">Aug 2025 - Oct 2025</p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
+                    <p className="text-gray-300">Completed structured internship focused on Python-based machine learning with hands-on experience in data preprocessing, feature engineering, and model training using real-world datasets.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
+                    <p className="text-gray-300">Developed and evaluated supervised learning models, applying appropriate performance metrics to assess accuracy and improve model reliability.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
+                    <p className="text-gray-300">Demonstrated strong analytical and problem-solving skills by applying machine learning concepts to practical scenarios, following industry-aligned workflows and best practices.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
@@ -356,45 +369,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-32 px-6 bg-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-7xl font-bold mb-4">
-              <span className="text-gray-700">Experience</span>
-            </h2>
-            <h3 className="text-4xl font-bold text-orange-500">Career</h3>
-          </div>
-
-          <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-10">
-            <div className="flex items-start gap-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                <Code size={32} className="text-orange-500" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-3xl font-bold text-white mb-2">Machine Learning Intern</h3>
-                <p className="text-orange-500 font-semibold text-lg mb-1">Agratas Edutech</p>
-                <p className="text-gray-500 mb-6">Aug 2025 - Oct 2025</p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
-                    <p className="text-gray-300">Completed structured internship focused on Python-based machine learning with hands-on experience in data preprocessing, feature engineering, and model training using real-world datasets.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
-                    <p className="text-gray-300">Developed and evaluated supervised learning models, applying appropriate performance metrics to assess accuracy and improve model reliability.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
-                    <p className="text-gray-300">Demonstrated strong analytical and problem-solving skills by applying machine learning concepts to practical scenarios, following industry-aligned workflows and best practices.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
@@ -462,6 +436,7 @@ const Portfolio = () => {
             <div className="flex flex-wrap justify-center gap-8">
               <button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-orange-500 transition-colors">Home</button>
               <button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-orange-500 transition-colors">About</button>
+              <button onClick={() => scrollToSection('experience')} className="text-gray-400 hover:text-orange-500 transition-colors">Experience</button>
               <button onClick={() => scrollToSection('projects')} className="text-gray-400 hover:text-orange-500 transition-colors">Projects</button>
               <button onClick={() => scrollToSection('skills')} className="text-gray-400 hover:text-orange-500 transition-colors">Skills</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-orange-500 transition-colors">Contact</button>
