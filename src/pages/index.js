@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, Menu, X, Code, ChevronRight } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Menu, X, ArrowRight, Code2, Cpu, Database, Boxes } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,84 +37,122 @@ const Portfolio = () => {
       category: "Machine Learning",
       description: "Developed a recommendation system using content-based filtering and collaborative filtering to suggest movies based on features and user preferences.",
       highlights: [
-        "Achieved 85% accuracy with under 2-second response times",
-        "Collaborative filtering had 10% higher precision, content-based filtering was 75% faster",
-        "Processed 2000+ movies and deployed web app using Flask for real-time recommendations"
+        "85% accuracy with under 2-second response times",
+        "10% higher precision with collaborative filtering",
+        "Processed 2000+ movies with Flask deployment"
       ],
-      tech: ["Python", "Flask", "Scikit-learn", "Pandas", "Content-based Filtering", "Collaborative Filtering"]
+      tech: ["Python", "Flask", "Scikit-learn", "Pandas"],
+      stats: { accuracy: "85%", speed: "<2s", scale: "2000+" }
     },
     {
-      title: "Predictive Churn Modeling for Telecom Customers",
+      title: "Predictive Churn Modeling for Telecom",
       category: "Machine Learning",
-      description: "Built and compared churn prediction models using logistic regression, decision trees, and random forests to identify the most accurate approach.",
+      description: "Built and compared churn prediction models using logistic regression, decision trees, and random forests.",
       highlights: [
-        "Achieved 79.4% accuracy with tuned random forest model",
-        "Improved accuracy by 4.3% using hyperparameter tuning and grid search cross-validation",
-        "Analyzed data from 7,000+ customers, identifying key churn factors for retention strategies"
+        "79.4% accuracy with tuned random forest model",
+        "4.3% improvement through hyperparameter tuning",
+        "Analyzed 7,000+ customer data points"
       ],
-      tech: ["Python", "Scikit-learn", "Random Forest", "Logistic Regression", "Decision Trees", "Grid Search"]
+      tech: ["Python", "Scikit-learn", "Random Forest", "Grid Search"],
+      stats: { accuracy: "79.4%", improvement: "+4.3%", data: "7K+" }
     },
     {
-      title: "Image Classification Using Convolutional Neural Networks (CNN)",
+      title: "Image Classification Using CNN",
       category: "Deep Learning",
-      description: "Developed a CNN model on the CIFAR-10 dataset with batch normalization and dropout techniques for robust image classification.",
+      description: "Developed a CNN model on the CIFAR-10 dataset with batch normalization and dropout techniques.",
       highlights: [
-        "Achieved 89% accuracy using batch normalization and dropout",
-        "Reduced training time to 150 seconds on GPU",
-        "Processed 60,000+ images across 10 categories for scalable real-time classification"
+        "89% accuracy with optimized architecture",
+        "150-second training time on GPU",
+        "60,000+ images across 10 categories"
       ],
-      tech: ["Python", "TensorFlow", "Keras", "CNN", "GPU Computing", "CIFAR-10"]
+      tech: ["Python", "TensorFlow", "Keras", "CNN"],
+      stats: { accuracy: "89%", time: "150s", images: "60K+" }
     },
     {
-      title: "Intelligent Customer Service Chatbot Using Machine Learning and LSTM",
+      title: "Customer Service Chatbot with LSTM",
       category: "Natural Language Processing",
-      description: "Developed a chatbot using machine learning for intent detection and LSTM networks for generating contextual responses.",
+      description: "Developed a chatbot using machine learning for intent detection and LSTM networks for response generation.",
       highlights: [
-        "Achieved 90% accuracy in answering customer queries",
-        "Reduced response times to less than 2 seconds",
-        "Scaled to handle large volumes of customer interactions for order tracking, store hours, and product availability"
+        "90% accuracy in query responses",
+        "Sub-2-second response times",
+        "Scalable for high-volume interactions"
       ],
-      tech: ["Python", "LSTM", "TensorFlow", "Keras", "NLP", "Machine Learning"]
+      tech: ["Python", "LSTM", "TensorFlow", "NLP"],
+      stats: { accuracy: "90%", response: "<2s", scale: "High" }
     },
     {
-      title: "Decision Support System for Drone Management",
-      category: "Machine Learning & Web Development",
-      description: "Developed a Random Forest model to recommend optimal drones based on 11 key parameters with real-time prediction capabilities.",
+      title: "Decision Support System for Drones",
+      category: "ML & Web Development",
+      description: "Developed a Random Forest model to recommend optimal drones based on 11 key parameters with real-time predictions.",
       highlights: [
-        "Achieved 95% accuracy in drone recommendations",
-        "Response times under 3 seconds using Flask and MongoDB integration",
-        "Designed React interface for seamless real-time drone selection, optimized using PCA"
+        "95% recommendation accuracy",
+        "Under 3-second response times",
+        "React interface with PCA optimization"
       ],
-      tech: ["Python", "React.js", "Flask", "MongoDB", "Random Forest", "PCA"]
+      tech: ["Python", "React", "Flask", "MongoDB"],
+      stats: { accuracy: "95%", speed: "<3s", params: "11" }
     }
   ];
 
   const skills = [
-    { category: "Programming Languages", items: ["Python", "MATLAB", "C/C++", "JavaScript", "HTML", "CSS"] },
-    { category: "Frameworks & Libraries", items: ["Flask", "React.js", "Scikit-learn", "TensorFlow", "Keras", "Pandas", "NumPy"] },
-    { category: "ML/DL Techniques", items: ["Content-based Filtering", "Collaborative Filtering", "Logistic Regression", "Decision Trees", "Random Forests", "CNN", "LSTM"] },
-    { category: "Databases & Tools", items: ["MongoDB", "SQL", "PCA", "Hyperparameter Tuning", "Grid Search CV"] },
-    { category: "DevOps & Version Control", items: ["Git", "GitHub", "GitHub Actions", "Docker", "CI/CD"] }
+    { 
+      category: "Languages",
+      icon: <Code2 size={24} />,
+      items: ["Python", "MATLAB", "C/C++", "JavaScript", "HTML/CSS"] 
+    },
+    { 
+      category: "ML/DL Frameworks",
+      icon: <Cpu size={24} />,
+      items: ["TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy"] 
+    },
+    { 
+      category: "Web Development",
+      icon: <Boxes size={24} />,
+      items: ["Flask", "React.js", "REST APIs", "MongoDB", "SQL"] 
+    },
+    { 
+      category: "ML Techniques",
+      icon: <Database size={24} />,
+      items: ["CNN", "LSTM", "Random Forest", "Logistic Regression", "Decision Trees"] 
+    },
+    { 
+      category: "Tools & DevOps",
+      icon: <Code2 size={24} />,
+      items: ["Git", "GitHub", "Docker", "CI/CD", "Grid Search CV"] 
+    },
+    { 
+      category: "Data Science",
+      icon: <Cpu size={24} />,
+      items: ["PCA", "Feature Engineering", "Data Preprocessing", "Hyperparameter Tuning"] 
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      {/* Animated background elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-30">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-4000"></div>
+      </div>
+
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
+      <nav className="fixed top-0 w-full bg-blue-900/80 backdrop-blur-xl z-50 border-b border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="text-2xl font-bold tracking-wider">
-              <span className="text-white">KARTHIK</span>
-              <span className="text-orange-500">.</span>
-            </div>
+            <button onClick={() => scrollToSection('home')} className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Karthik Kumar
+            </button>
             
-            <div className="hidden md:flex items-center space-x-8">
-              {['Home', 'About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
+            <div className="hidden md:flex items-center space-x-10">
+              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-sm font-medium transition-colors hover:text-orange-500 ${
-                    activeSection === item.toLowerCase() ? 'text-orange-500' : 'text-gray-300'
+                  className={`text-sm font-medium transition-all ${
+                    activeSection === item.toLowerCase() 
+                      ? 'text-cyan-400' 
+                      : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   {item}
@@ -122,9 +160,9 @@ const Portfolio = () => {
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="px-6 py-2 bg-white text-black rounded-full font-medium hover:bg-orange-500 hover:text-white transition-all"
+                className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 rounded-lg font-medium transition-all shadow-lg shadow-cyan-500/50"
               >
-                Get in Touch
+                Hire Me
               </button>
             </div>
 
@@ -135,12 +173,12 @@ const Portfolio = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden bg-black border-t border-gray-800">
-            {['Home', 'About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
+          <div className="md:hidden bg-blue-900/95 backdrop-blur-xl border-t border-cyan-500/20">
+            {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="block w-full text-left px-6 py-4 hover:bg-gray-900 transition-colors text-gray-300 hover:text-orange-500"
+                className="block w-full text-left px-6 py-4 hover:bg-cyan-500/10 transition-colors"
               >
                 {item}
               </button>
@@ -151,89 +189,94 @@ const Portfolio = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-6 pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-cyan-500/10"></div>
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        
-        <div className="relative max-w-6xl mx-auto text-left">
-          <div className="mb-8">
-            <div className="inline-block px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full mb-6">
-              <span className="text-orange-500 text-sm font-medium">Machine Learning Engineer</span>
-            </div>
+        <div className="relative max-w-6xl mx-auto text-center z-10">
+          <div className="inline-block mb-6">
+            <span className="px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm">
+              Machine Learning Engineer
+            </span>
           </div>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">
-            <span className="text-white">CODE.</span><br/>
-            <span className="text-white">CREATE.</span><br/>
-            <span className="text-orange-500">INNOVATE!</span>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent leading-tight">
+            Goriga Karthik Kumar
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl">
-            Building intelligent ML solutions and scalable applications using deep learning, AI, and modern web technologies.
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Transforming data into intelligent solutions through cutting-edge machine learning and AI technologies
           </p>
-          <div className="flex flex-wrap gap-4">
+          
+          <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => scrollToSection('projects')}
-              className="px-8 py-4 bg-orange-500 text-white rounded-full font-medium hover:bg-orange-600 transition-all flex items-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 rounded-lg font-medium transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/50 group"
             >
-              View My Work
-              <ChevronRight size={20} />
+              View Projects
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-8 py-4 bg-white/10 border border-white/20 text-white rounded-full font-medium hover:bg-white/20 transition-all"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 rounded-lg font-medium transition-all"
             >
-              Contact Me
+              Get in Touch
             </button>
           </div>
+
+
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-7xl font-bold mb-4">
-              <span className="text-gray-700">About Me</span>
+      <section id="about" className="relative py-32 px-6">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              About Me
             </h2>
-            <h3 className="text-4xl font-bold text-orange-500">About</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"></div>
           </div>
           
-          <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+          <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-12 border border-white/10 shadow-2xl">
+            <p className="text-lg text-gray-300 leading-relaxed mb-8">
               I'm a Computer Science Master's student at Blekinge Institute of Technology, Sweden, specializing in machine learning, deep learning, and artificial intelligence. With expertise in building intelligent systems using TensorFlow, Keras, and modern ML frameworks, I focus on creating scalable applications that solve real-world problems through data-driven approaches and innovative algorithms.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-8 mt-12">
-              <div className="bg-black/50 p-6 rounded-xl border border-gray-800">
-                <h4 className="text-orange-500 font-semibold mb-4">Education</h4>
-                <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-500/20">
+                <h3 className="text-xl font-semibold mb-6 text-cyan-400 flex items-center gap-2">
+                  <Code2 size={24} />
+                  Education
+                </h3>
+                <div className="space-y-6">
                   <div>
-                    <p className="text-white font-medium">Master's in Computer Science</p>
+                    <p className="font-semibold text-white">Master's in Computer Science</p>
                     <p className="text-gray-400 text-sm">Blekinge Institute of Technology</p>
-                    <p className="text-gray-500 text-xs mt-1">Jan 2024 - Present</p>
-                    <p className="text-gray-400 text-sm mt-2">Software Security, Cloud Computing, AI, Malware Analysis, Research Methodology</p>
+                    <p className="text-gray-500 text-sm mt-1">Jan 2024 - Present</p>
                   </div>
                   <div>
-                    <p className="text-white font-medium">Bachelor's in Computer Science</p>
+                    <p className="font-semibold text-white">Bachelor's in Computer Science</p>
                     <p className="text-gray-400 text-sm">JNTU Hyderabad</p>
-                    <p className="text-gray-500 text-xs mt-1">Aug 2020 - Nov 2023</p>
-                    <p className="text-gray-400 text-sm mt-2">AI, Data Structures, Algorithms, Database Systems, Cloud Computing</p>
+                    <p className="text-gray-500 text-sm mt-1">Aug 2020 - Nov 2023</p>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-black/50 p-6 rounded-xl border border-gray-800">
-                <h4 className="text-orange-500 font-semibold mb-2">Contact</h4>
-                <div className="flex items-center gap-2 text-gray-300 mb-2">
-                  <Mail size={16} className="text-orange-500" />
-                  <span className="text-sm">gkklucky7@gmail.com</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 mb-4">
-                  <Phone size={16} className="text-orange-500" />
-                  <span className="text-sm">0760502329</span>
-                </div>
-                <div className="mt-6">
-                  <h4 className="text-orange-500 font-semibold mb-3">Location</h4>
-                  <p className="text-gray-300">Karlskrona, Sweden</p>
+              <div className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-xl p-6 border border-purple-500/20">
+                <h3 className="text-xl font-semibold mb-6 text-cyan-400 flex items-center gap-2">
+                  <Mail size={24} />
+                  Contact Info
+                </h3>
+                <div className="space-y-4">
+                  <a href="mailto:gkklucky7@gmail.com" className="flex items-center gap-3 hover:text-cyan-400 transition-colors">
+                    <Mail size={18} className="text-cyan-400" />
+                    <span className="text-gray-300 text-sm">gkklucky7@gmail.com</span>
+                  </a>
+                  <a href="tel:+460760502329" className="flex items-center gap-3 hover:text-cyan-400 transition-colors">
+                    <Phone size={18} className="text-cyan-400" />
+                    <span className="text-gray-300 text-sm">0760502329</span>
+                  </a>
+                  <div className="flex items-center gap-3">
+                    <span className="text-cyan-400">📍</span>
+                    <span className="text-gray-300 text-sm">Karlskrona, Sweden</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -242,38 +285,38 @@ const Portfolio = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-32 px-6 bg-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-7xl font-bold mb-4">
-              <span className="text-gray-700">Experience</span>
+      <section id="experience" className="relative py-32 px-6 bg-black/20">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Experience
             </h2>
-            <h3 className="text-4xl font-bold text-orange-500">Career</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"></div>
           </div>
 
-          <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-10">
+          <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-12 border border-white/10 shadow-2xl">
             <div className="flex items-start gap-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                <Code size={32} className="text-orange-500" />
+              <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
+                <Cpu size={32} className="text-white" />
               </div>
               <div className="flex-1">
-                <h3 className="text-3xl font-bold text-white mb-2">Machine Learning Intern</h3>
-                <p className="text-orange-500 font-semibold text-lg mb-1">Agratas Edutech</p>
-                <p className="text-gray-500 mb-6">Aug 2025 - Oct 2025</p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
-                    <p className="text-gray-300">Completed structured internship focused on Python-based machine learning with hands-on experience in data preprocessing, feature engineering, and model training using real-world datasets.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
-                    <p className="text-gray-300">Developed and evaluated supervised learning models, applying appropriate performance metrics to assess accuracy and improve model reliability.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
-                    <p className="text-gray-300">Demonstrated strong analytical and problem-solving skills by applying machine learning concepts to practical scenarios, following industry-aligned workflows and best practices.</p>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-bold mb-2">Machine Learning Intern</h3>
+                <p className="text-cyan-400 font-semibold mb-1">Agratas Edutech</p>
+                <p className="text-gray-400 text-sm mb-6">Aug 2025 - Oct 2025</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <span className="text-cyan-400 mt-1">▸</span>
+                    <span>Completed structured internship focused on Python-based machine learning with hands-on experience in data preprocessing, feature engineering, and model training</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <span className="text-cyan-400 mt-1">▸</span>
+                    <span>Developed and evaluated supervised learning models, applying performance metrics to improve reliability</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <span className="text-cyan-400 mt-1">▸</span>
+                    <span>Applied ML concepts to practical scenarios following industry best practices</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -281,54 +324,60 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-7xl font-bold mb-4">
-              <span className="text-gray-700">My Work</span>
+      <section id="projects" className="relative py-32 px-6">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Featured Projects
             </h2>
-            <h3 className="text-4xl font-bold text-orange-500">Projects</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"></div>
           </div>
 
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl overflow-hidden hover:border-orange-500/50 transition-all duration-300"
+                className="group bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20"
               >
-                <div className="p-10">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <div className="inline-block px-3 py-1 bg-orange-500/10 border border-orange-500/30 rounded-full mb-4">
-                        <span className="text-orange-500 text-sm font-medium">{project.category}</span>
-                      </div>
-                      <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-orange-500 transition-colors">
-                        {project.title}
-                      </h3>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-400 text-lg mb-6 leading-relaxed">{project.description}</p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {project.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <ChevronRight size={20} className="text-orange-500 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300">{highlight}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-3">
-                    {project.tech.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="px-4 py-2 bg-black border border-gray-700 rounded-lg text-sm text-orange-500 font-medium"
-                      >
-                        {tech}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-xs font-medium">
+                    {project.category}
+                  </span>
+                  <div className="flex gap-3 text-xs">
+                    {Object.entries(project.stats).map(([key, value]) => (
+                      <span key={key} className="text-gray-400">
+                        <span className="text-cyan-400">{key}:</span> {value}
                       </span>
                     ))}
                   </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">
+                  {project.title}
+                </h3>
+                
+                <p className="text-gray-400 mb-4 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+                
+                <ul className="space-y-2 mb-6">
+                  {project.highlights.map((highlight, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <span className="text-cyan-400 mt-1">•</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-300 hover:border-cyan-500/50 transition-all"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
@@ -337,27 +386,32 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-32 px-6 bg-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-7xl font-bold mb-4">
-              <span className="text-gray-700">Technical Skills</span>
+      <section id="skills" className="relative py-32 px-6 bg-black/20">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Technical Skills
             </h2>
-            <h3 className="text-4xl font-bold text-orange-500">Skills</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl p-8 hover:border-orange-500/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 group"
               >
-                <h4 className="text-xl font-bold text-orange-500 mb-6">{skill.category}</h4>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="text-cyan-400 group-hover:scale-110 transition-transform">
+                    {skill.icon}
+                  </div>
+                  <h4 className="text-lg font-bold">{skill.category}</h4>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   {skill.items.map((item, i) => (
                     <span
                       key={i}
-                      className="px-4 py-2 bg-black border border-gray-700 rounded-lg text-sm text-white hover:border-orange-500/50 transition-all"
+                      className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-sm text-gray-300 hover:bg-cyan-500/10 hover:border-cyan-500/50 transition-all"
                     >
                       {item}
                     </span>
@@ -370,93 +424,94 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white">Let's Work Together</h2>
-          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, opportunities, and collaborations. Get in touch and let's create something amazing.
-          </p>
+      <section id="contact" className="relative py-32 px-6">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Let's Connect
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300">
+              Open to new opportunities and collaborations
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6">
             <a
               href="mailto:gkklucky7@gmail.com"
-              className="flex flex-col items-center gap-4 p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl hover:border-orange-500/50 transition-all group"
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all group"
             >
-              <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all">
-                <Mail size={28} className="text-orange-500 group-hover:text-white" />
-              </div>
-              <div>
-                <p className="text-gray-400 text-sm mb-1">Email</p>
-                <p className="text-white font-medium">gkklucky7@gmail.com</p>
-              </div>
+              <Mail size={40} className="mx-auto mb-4 text-cyan-400 group-hover:scale-110 transition-transform" />
+              <p className="text-sm text-gray-400 mb-2">Email</p>
+              <p className="text-sm font-medium">gkklucky7@gmail.com</p>
             </a>
 
             <a
               href="https://github.com/karthikkumar09"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-4 p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl hover:border-orange-500/50 transition-all group"
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all group"
             >
-              <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all">
-                <Github size={28} className="text-orange-500 group-hover:text-white" />
-              </div>
-              <div>
-                <p className="text-gray-400 text-sm mb-1">GitHub</p>
-                <p className="text-white font-medium">karthikkumar09</p>
-              </div>
+              <Github size={40} className="mx-auto mb-4 text-cyan-400 group-hover:scale-110 transition-transform" />
+              <p className="text-sm text-gray-400 mb-2">GitHub</p>
+              <p className="text-sm font-medium">karthikkumar09</p>
             </a>
 
             <a
               href="https://www.linkedin.com/in/karthik-kumar-781bb32b4/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-4 p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl hover:border-orange-500/50 transition-all group"
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all group"
             >
-              <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all">
-                <Linkedin size={28} className="text-orange-500 group-hover:text-white" />
-              </div>
-              <div>
-                <p className="text-gray-400 text-sm mb-1">LinkedIn</p>
-                <p className="text-white font-medium">Karthik Kumar</p>
-              </div>
+              <Linkedin size={40} className="mx-auto mb-4 text-cyan-400 group-hover:scale-110 transition-transform" />
+              <p className="text-sm text-gray-400 mb-2">LinkedIn</p>
+              <p className="text-sm font-medium">Karthik Kumar</p>
             </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-black border-t border-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="text-2xl font-bold">
-              <span className="text-white">KARTHIK</span>
-              <span className="text-orange-500">.</span>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-8">
-              <button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-orange-500 transition-colors">Home</button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-orange-500 transition-colors">About</button>
-              <button onClick={() => scrollToSection('experience')} className="text-gray-400 hover:text-orange-500 transition-colors">Experience</button>
-              <button onClick={() => scrollToSection('projects')} className="text-gray-400 hover:text-orange-500 transition-colors">Projects</button>
-              <button onClick={() => scrollToSection('skills')} className="text-gray-400 hover:text-orange-500 transition-colors">Skills</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-orange-500 transition-colors">Contact</button>
-            </div>
-            
-            <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/karthik-kumar-781bb32b4/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all">
-                <Linkedin size={18} />
-              </a>
-              <a href="https://github.com/karthikkumar09" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all">
-                <Github size={18} />
-              </a>
-            </div>
-          </div>
+      <footer className="relative py-12 px-6 border-t border-white/10 bg-black/20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-sm text-gray-400">© 2026 Goriga Karthik Kumar. All rights reserved.</p>
           
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-            © 2026 Goriga Karthik Kumar. All Rights Reserved.
+          <div className="flex gap-6">
+            {['About', 'Projects', 'Skills', 'Contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item.toLowerCase())}
+                className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                {item}
+              </button>
+            ))}
           </div>
         </div>
       </footer>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animation-delay-1000 {
+          animation-delay: 1s;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+      `}</style>
     </div>
   );
 };
